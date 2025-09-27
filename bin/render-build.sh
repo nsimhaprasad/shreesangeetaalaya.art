@@ -7,10 +7,10 @@ echo "Installing dependencies..."
 bundle install
 
 echo "Installing Node dependencies..."
-yarn install
+npm install
 
 echo "Building CSS..."
-yarn build:css
+npm run build:css
 
 echo "Precompiling assets..."
 bundle exec rake assets:precompile
