@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keep Alive</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        // Simple keep-alive ping
+        setInterval(function() {
+            fetch('/up')
+                .then(response => console.log('Keep alive ping:', new Date()))
+                .catch(error => console.log('Ping failed:', error));
+        }, 300000); // 5 minutes
+
+        document.write('Keep alive service running...');
+    </script>
+</body>
+</html>

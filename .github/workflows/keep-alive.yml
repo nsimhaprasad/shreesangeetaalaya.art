@@ -1,0 +1,17 @@
+name: Keep Render App Alive
+
+on:
+  schedule:
+    # Runs every 5 minutes (GitHub Actions minimum is 5 minutes)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  keep_alive:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Ping Application
+      run: |
+        curl -f https://shreesangeetaalaya-art.onrender.com/up || exit 1
+        echo "Keep alive ping successful at $(date)"
