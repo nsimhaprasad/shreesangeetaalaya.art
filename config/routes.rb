@@ -8,19 +8,7 @@ Rails.application.routes.draw do
   get "contact", to: "home#contact"
   post "contact", to: "home#create_contact"
 
-  # Admin routes (accessible via admin.shreesangeetaalaya.art subdomain or /admin path)
-  constraints subdomain: 'admin' do
-    namespace :admin do
-      root "dashboard#index"
-      get "dashboard", to: "dashboard#index"
-      resources :students
-      resources :courses
-      resources :enrollments
-      resources :payments
-    end
-  end
-
-  # Admin routes for development (accessible via /admin path)
+  # Admin routes (accessible via /admin path)
   namespace :admin do
     root "dashboard#index"
     get "dashboard", to: "dashboard#index"
