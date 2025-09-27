@@ -1,0 +1,237 @@
+<% content_for :title, "Shree Sangeetaalaya - Premier Music School | Learn Classical & Contemporary Music" %>
+<% content_for :description, "Join Shree Sangeetaalaya, the leading music school offering expert training in Indian classical, western classical, and contemporary music. Experienced faculty, structured curriculum, and performance opportunities for all ages." %>
+<% content_for :keywords, "music school, music lessons, classical music training, vocal music, instrumental music, music education, sangeetaalaya, music academy" %>
+
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">Welcome to Shree Sangeetaalaya</h1>
+        <p class="lead mb-4">Where Music Comes Alive Through Expert Guidance and Passionate Learning</p>
+        <p class="mb-4">Discover the joy of music with our comprehensive training programs in Indian Classical, Western Classical, and Contemporary music. Our experienced faculty and structured curriculum ensure every student reaches their musical potential.</p>
+        <div class="d-flex gap-3">
+          <%= link_to "Explore Courses", courses_path, class: "btn btn-light btn-lg" %>
+          <%= link_to "Contact Us", contact_path, class: "btn btn-outline-light btn-lg" %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center">
+          <i class="fas fa-music fa-10x opacity-75"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="h1 mb-4">About Shree Sangeetaalaya</h2>
+        <p class="lead">Established with a vision to nurture musical talent and preserve the rich tradition of Indian music while embracing contemporary forms, Shree Sangeetaalaya stands as a beacon of musical excellence.</p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-4 text-center mb-4">
+        <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+        <h4>Expert Faculty</h4>
+        <p>Learn from accomplished musicians with years of performance and teaching experience in both classical and contemporary music.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <i class="fas fa-book fa-3x text-primary mb-3"></i>
+        <h4>Structured Curriculum</h4>
+        <p>Progressive learning modules designed to build strong foundations while encouraging creative expression and musical growth.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+        <h4>Performance Opportunities</h4>
+        <p>Regular concerts, competitions, and recitals to showcase student talent and build confidence in live performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Courses Overview -->
+<section class="courses-section bg-light py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h1">Our Music Programs</h2>
+      <p class="lead">Comprehensive training in various musical forms and instruments</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-om fa-3x text-primary mb-3"></i>
+            <h4 class="card-title">Indian Classical Music</h4>
+            <p class="card-text">Master the intricacies of Hindustani and Carnatic classical music with traditional ragas, talas, and compositions.</p>
+            <ul class="list-unstyled">
+              <li>• Hindustani Classical Vocal</li>
+              <li>• Carnatic Classical Vocal</li>
+              <li>• Tabla & Percussion</li>
+              <li>• Harmonium & Keyboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-music fa-3x text-primary mb-3"></i>
+            <h4 class="card-title">Western Classical Music</h4>
+            <p class="card-text">Explore the rich tradition of Western classical music with proper technique and musical theory.</p>
+            <ul class="list-unstyled">
+              <li>• Piano & Keyboard</li>
+              <li>• Violin & String Instruments</li>
+              <li>• Western Classical Vocal</li>
+              <li>• Music Theory & Composition</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-guitar fa-3x text-primary mb-3"></i>
+            <h4 class="card-title">Contemporary Music</h4>
+            <p class="card-text">Learn popular music styles including Bollywood, Jazz, Rock, and Folk with modern techniques.</p>
+            <ul class="list-unstyled">
+              <li>• Guitar (Acoustic & Electric)</li>
+              <li>• Contemporary Vocal</li>
+              <li>• Bollywood Music</li>
+              <li>• Music Production</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <%= link_to "View All Courses", courses_path, class: "btn btn-primary btn-lg" %>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="h1 mb-4">Why Choose Shree Sangeetaalaya?</h2>
+        <div class="feature-list">
+          <div class="d-flex mb-3">
+            <i class="fas fa-check-circle fa-2x text-success me-3"></i>
+            <div>
+              <h5>Personalized Learning</h5>
+              <p>Individual attention and customized lesson plans based on student's pace and musical interests.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fas fa-check-circle fa-2x text-success me-3"></i>
+            <div>
+              <h5>Flexible Scheduling</h5>
+              <p>Choose from weekday or weekend batches with timing that suits your schedule.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fas fa-check-circle fa-2x text-success me-3"></i>
+            <div>
+              <h5>Performance Training</h5>
+              <p>Regular stage performances to build confidence and showcase musical progress.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fas fa-check-circle fa-2x text-success me-3"></i>
+            <div>
+              <h5>All Age Groups</h5>
+              <p>Programs designed for children (age 5+), teenagers, adults, and senior citizens.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-primary text-white p-4 rounded">
+          <h3>Start Your Musical Journey Today!</h3>
+          <p>Join hundreds of students who have discovered their musical potential at Shree Sangeetaalaya.</p>
+          <ul class="list-unstyled">
+            <li>✓ Free trial class</li>
+            <li>✓ Expert guidance</li>
+            <li>✓ Affordable fees</li>
+            <li>✓ Certificate courses</li>
+          </ul>
+          <%= link_to "Enroll Now", contact_path, class: "btn btn-light btn-lg mt-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials bg-light py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h1">What Our Students Say</h2>
+      <p class="lead">Success stories from our musical family</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="card-text">"The teachers at Shree Sangeetaalaya are incredibly patient and knowledgeable. My daughter has grown so much in her classical vocal training."</p>
+            <footer class="blockquote-footer">Priya Sharma, Parent</footer>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="card-text">"I started learning guitar as an adult and the flexible timings made it possible. The teaching method is excellent and very encouraging."</p>
+            <footer class="blockquote-footer">Rajesh Kumar, Working Professional</footer>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="card-text">"The regular concerts and performances have built my confidence tremendously. This school truly cares about student development."</p>
+            <footer class="blockquote-footer">Anita Patel, Student</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section bg-primary text-white py-5">
+  <div class="container text-center">
+    <h2 class="h1 mb-4">Ready to Begin Your Musical Journey?</h2>
+    <p class="lead mb-4">Contact us today for a free consultation and trial class</p>
+    <div class="d-flex justify-content-center gap-3">
+      <%= link_to "Contact Us", contact_path, class: "btn btn-light btn-lg" %>
+      <%= link_to "Call Now: +91 XXX XXX XXXX", "tel:+91XXXXXXXXX", class: "btn btn-outline-light btn-lg" %>
+    </div>
+  </div>
+</section>

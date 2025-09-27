@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= content_for(:title) || "Shree Sangeetaalaya - Premier Music School | Learn Classical & Contemporary Music" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="description" content="<%= content_for(:description) || 'Learn music at Shree Sangeetaalaya - Premier music school offering classical, contemporary and traditional music lessons. Expert faculty, structured courses, and performance opportunities.' %>">
+    <meta name="keywords" content="<%= content_for(:keywords) || 'music school, music lessons, classical music, contemporary music, vocal training, instrumental training, music education' %>">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Open Graph tags for social media %>
+    <meta property="og:title" content="<%= content_for(:title) || 'Shree Sangeetaalaya - Premier Music School' %>">
+    <meta property="og:description" content="<%= content_for(:description) || 'Learn music at Shree Sangeetaalaya - Premier music school offering classical, contemporary and traditional music lessons.' %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:site_name" content="Shree Sangeetaalaya">
+
+    <%# Twitter Card tags %>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= content_for(:title) || 'Shree Sangeetaalaya - Premier Music School' %>">
+    <meta name="twitter:description" content="<%= content_for(:description) || 'Learn music at Shree Sangeetaalaya - Premier music school offering classical, contemporary and traditional music lessons.' %>">
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Schema.org structured data %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicSchool",
+      "name": "Shree Sangeetaalaya",
+      "url": "<%= request.base_url %>",
+      "description": "Premier music school offering classical, contemporary and traditional music lessons",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <%# FontAwesome for icons %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <%= link_to "Shree Sangeetaalaya", root_path, class: "navbar-brand" %>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <%= link_to "Home", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "About", about_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Courses", courses_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Contact", contact_path, class: "nav-link" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <% if notice %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <%= notice %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      <% end %>
+
+      <% if alert %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= alert %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </main>
+
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Shree Sangeetaalaya</h5>
+            <p>Nurturing musical talent through expert guidance and structured learning.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><%= link_to "About Us", about_path, class: "text-light" %></li>
+              <li><%= link_to "Courses", courses_path, class: "text-light" %></li>
+              <li><%= link_to "Contact", contact_path, class: "text-light" %></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact Info</h5>
+            <p>Email: info@shreesangeetaalaya.art</p>
+            <p>Phone: +91 XXX XXX XXXX</p>
+          </div>
+        </div>
+        <hr>
+        <div class="text-center">
+          <p>&copy; <%= Date.current.year %> Shree Sangeetaalaya. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
