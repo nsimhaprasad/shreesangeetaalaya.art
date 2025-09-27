@@ -6,7 +6,6 @@ gem "rails", "~> 8.0.2", ">= 8.0.2.1"
 gem "propshaft"
 # Use sqlite3 for all environments with Turso.tech support
 gem "sqlite3", ">= 1.4"
-gem "ruby-lsp", group: :development, require: false
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
