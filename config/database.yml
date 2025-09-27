@@ -78,7 +78,7 @@ test:
 production:
   primary: &primary_production
     adapter: sqlite3
-    url: <%= ENV["DATABASE_URL"] || "libsql://shreesangeetaalaya-simha-prasad.aws-ap-south-1.turso.io" %>
+    database: storage/production.sqlite3
     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
     timeout: 5000
   cache:

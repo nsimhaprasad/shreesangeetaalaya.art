@@ -6,8 +6,6 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: DATABASE_URL
-        value: libsql://shreesangeetaalaya-simha-prasad.aws-ap-south-1.turso.io
       - key: RAILS_MASTER_KEY
         sync: false
       - key: WEB_CONCURRENCY
